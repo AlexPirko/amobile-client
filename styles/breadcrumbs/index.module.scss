@@ -1,0 +1,41 @@
+@import 'styles/_colors.scss';
+
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.dark_mode {
+        color: $lightgrey;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 14px;
+      color: $darkmd;
+    }
+
+    &.dark_mode &__text {
+      color: $lightgrey;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+@import 'styles/_colors.scss';
+
+.profile {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__span {
+    & svg path {
+      stroke: $grey;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover svg path {
+      stroke: $hover;
+    }
+  }
+
+  &__span {
+    &.dark_mode {
+      color: $lightgrey;
+      & svg path {
+        stroke: $lightgrey;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        stroke: $hover;
+      }
+    }
+  }
+
+  &__text {
+    font-family: Roboto;
+    color: $grey;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    transition: all 0.3s ease-in-out;
+
+    &.dark_mode {
+      color: $lightgrey;
+    }
+
+    &:hover {
+      color: $hover;
+      text-decoration: underline;
+    }
+  }
+
+  &__btn.dark_mode &__span > svg path {
+    stroke: $lightgrey;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover &__btn.dark_mode &__span > svg path {
+    stroke: $hover;
+  }
+
+  &__btn.dark_mode &__text {
+    color: $lightgrey;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $hover;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    margin: 0;
+    padding: 15px;
+    list-style-type: none;
+    border-radius: 4px;
+    background-color: $white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    @media (max-width: 860px) {
+      top: -120px;
+    }
+
+    &__user {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 12px;
+      border-bottom: 1px solid $inputgrey;
+    }
+
+    &__username {
+      font-size: 18px;
+      color: $darkmd;
+
+      &.dark_mode {
+        color: $white;
+      }
+    }
+
+    &__email {
+      opacity: 0.5;
+      font-size: 14px;
+      color: $darkmd;
+
+      &.dark_mode {
+        color: $inputgrey;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &__btn {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      &__svg {
+        width: 17px;
+        height: 18px;
+
+        & svg {
+          fill: $darkmd;
+          transition: fill 0.2s ease-in-out;
+        }
+
+        &.dark_mode svg {
+          fill: $white;
+        }
+      }
+
+      &:hover &__svg > svg {
+        fill: $hover;
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &__text {
+        margin-right: 5px;
+        color: $darkmd;
+        transition: color 0.3s ease-in-out;
+
+        &.dark_mode {
+          color: $lightgrey;
+        }
+      }
+
+      &:hover &__text {
+        color: $hover;
+      }
+    }
+  }
+
+  &__dropdown.dark_mode {
+    background-color: $darkmd;
+  }
+}

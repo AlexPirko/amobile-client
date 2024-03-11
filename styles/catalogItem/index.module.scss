@@ -1,0 +1,151 @@
+@import 'styles/_colors.scss';
+.catalog_item {
+  border-top: 1px solid $hover;
+  border-bottom: 1px solid $hover;
+  width: 100%;
+
+  &__wrapper {
+    width: 227px !important;
+    padding: 24px;
+    border-radius: 8px;
+
+    &__image_wrapper {
+      position: relative;
+      width: 200px;
+      height: 230px;
+      &__infoblock {
+        z-index: 50;
+        position: absolute;
+        display: flex;
+
+        right: 0;
+        &__discount {
+          width: 60px;
+          height: 40px;
+          background-color: $yellow;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          font-family: Roboto;
+          color: $dark;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+        &__new {
+          width: 60px;
+          height: 40px;
+          background-color: $green;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          font-family: Roboto;
+          color: $white;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21px;
+          text-transform: uppercase;
+        }
+      }
+
+      &__image {
+        object-fit: contain;
+      }
+    }
+
+    &__subtitle {
+      width: 183px;
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      color: $dark;
+      margin-top: 16px;
+      cursor: pointer;
+      &:hover {
+        color: $hover;
+      }
+      &.dark_mode {
+        color: $lightgrey;
+      }
+    }
+
+    &__price_wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 16px;
+      &__new_price {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $dark;
+        &.dark_mode {
+          color: $lightgrey;
+        }
+      }
+
+      &__old_price {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16px;
+        text-decoration-line: line-through;
+        color: #ababab;
+      }
+    }
+
+    &__bottom {
+      width: 165px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      &__availability {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16px;
+        color: $green;
+        &__non {
+          color: $grey;
+          opacity: 0.7;
+        }
+      }
+      &__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+        background-color: rgb(246, 246, 246);
+        padding: 12.5px 11px;
+        cursor: pointer;
+        &.dark_mode {
+          background-color: $lightgrey;
+        }
+      }
+      &__icon svg path {
+        stroke: #0c0c0c;
+      }
+      &__icon svg:hover {
+        fill: $hover;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: 16px;
+      &.added {
+        background-color: $secondary;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'styles/_colors.scss';
+
+.theme {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 860px) {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+  &__input {
+    appearance: none;
+    width: 48px;
+    height: 28px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: none;
+    background-color: #383838;
+    border: none;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+
+    &::before {
+      content: url('../../public/icons/moon.svg');
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: 24px;
+      height: 24px;
+      background: $darkbg;
+      left: 3px;
+      top: 2px;
+      border-radius: 50%;
+      text-indent: 1px;
+      color: $white;
+      white-space: nowrap;
+      transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+    }
+
+    &:checked {
+      background-color: $inputgrey;
+      border-color: $darkbg;
+
+      &:checked::before {
+        left: 22px;
+        content: url('../../public/icons/sun.svg');
+        background: $white;
+      }
+    }
+  }
+}

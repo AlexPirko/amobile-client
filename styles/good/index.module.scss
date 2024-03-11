@@ -1,0 +1,184 @@
+@import 'styles/_colors.scss';
+.good {
+  &__title_wrapper {
+    max-width: 310px;
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    cursor: pointer;
+    & svg {
+      stroke: $dark;
+      &:hover {
+        stroke: $hover;
+      }
+    }
+    &__title {
+      color: $dark;
+      font-family: Roboto;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      padding-left: 33px;
+      &.dark_mode {
+        color: $lightgrey;
+      }
+      &:hover {
+        color: $hover;
+      }
+
+      @media (max-width: 820px) {
+        font-size: 22px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__title_wrapper.dark_mode {
+    & svg {
+      stroke: $lightgrey;
+      &:hover {
+        stroke: $hover;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px 0px;
+    @media (max-width: 820px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__image_wrapper {
+      max-width: 411px;
+      height: auto;
+      &__image {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      max-width: 354px;
+      @media (max-width: 1040px) {
+        max-width: 254px;
+      }
+      @media (max-width: 820px) {
+        max-width: 554px;
+      }
+      &__title {
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 38px;
+        color: $dark;
+        @media (max-width: 1040px) {
+          font-size: 24px;
+          line-height: 28px;
+        }
+        &.dark_mode {
+          color: $lightgrey;
+        }
+      }
+      &__descr {
+        &__title {
+          font-family: Roboto;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 21px;
+          margin: 20px 0px;
+          color: $darkmd;
+          &.dark_mode {
+            color: $lightgrey;
+          }
+        }
+        &__text {
+          font-family: Roboto;
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 21px;
+          color: $darkmd;
+          &.dark_mode {
+            color: $lightgrey;
+          }
+        }
+      }
+    }
+
+    &__buy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px;
+      border-radius: 8px;
+      background-color: $inputgrey;
+      @media (max-width: 1040px) {
+        padding: 20px;
+      }
+      @media (max-width: 820px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 130px;
+        background-color: transparent;
+        padding: 0;
+      }
+
+      @media (max-width: 580px) {
+        width: 100%;
+        gap: 0;
+        padding: 0 20px;
+      }
+
+      &.dark_mode {
+        background-color: $darkmd;
+      }
+      &__price {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+        &.dark_mode {
+          color: $lightgrey;
+        }
+      }
+      &__btn {
+        width: 199px;
+        height: 49px;
+        margin-top: 20px;
+        @media (max-width: 820px) {
+          margin-top: 0;
+          width: 169px;
+          padding: 10px;
+        }
+        &.in_cart {
+          background-color: $secondary;
+          transition: background-color 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 40px 0;
+    border-top: 1px solid $hover;
+    &__title {
+      font-family: Roboto;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 38px;
+      @media (max-width: 820px) {
+        font-size: 19px;
+        line-height: 28px;
+      }
+      color: $dark;
+      &.dark_mode {
+        color: $lightgrey;
+      }
+    }
+  }
+}

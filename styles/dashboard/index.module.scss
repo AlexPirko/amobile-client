@@ -1,0 +1,65 @@
+@import 'styles/_colors.scss';
+
+.dashboard {
+  padding: 17px 0 40px 0;
+  &__subtitle {
+    margin-bottom: 28px;
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    color: $dark;
+    &.dark_mode {
+      color: $lightgrey;
+    }
+  }
+  &__main_slider {
+    &__image {
+      position: relative !important;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  }
+
+  &__catalog_slider {
+    padding: 40px 0;
+    &__wrapper {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+    }
+    &__image_wrapper {
+      position: relative;
+      width: 200px;
+      height: 211px;
+      border-radius: 8px;
+      background-color: $hover;
+
+      @media (max-width: 480px) {
+        width: 120px;
+      }
+    }
+    &__image {
+      position: absolute;
+      left: 33.6px;
+      right: -71.3px;
+      top: 20.05px;
+      bottom: -39.76px;
+      @media (max-width: 480px) {
+        left: 18.16px;
+      }
+    }
+    &__subtitle {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 23px;
+      color: $dark;
+      &.dark_mode {
+        color: $lightgrey;
+      }
+    }
+  }
+}
