@@ -30,7 +30,7 @@ export const singInFx = createEffect(
   async ({ url, username, password }: ISignInFx) => {
     const { data } = await api.post(url, { username, password })
 
-    toast.success('Вход выполнен!')
+    toast.success('Вход выполнен!!')
 
     return data
   }

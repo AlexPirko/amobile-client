@@ -113,14 +113,12 @@ export async function updateParamsAndFilters<T>(
   router: NextRouter
 ) {
   const params = router.query
-
   delete params.goods_model
   delete params.memory
   delete params.ram
   delete params.cores_num
   delete params.priceFrom
   delete params.priceTo
-
   router.push(
     {
       query: {
